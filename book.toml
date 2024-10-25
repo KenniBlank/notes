@@ -4,3 +4,15 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Notes"
+description = "This book covers all my notes that are in Github"
+text-direction = "ltr"
+
+[output.html.playground]
+runnable = false
+
+[output.html]
+default-theme = "navy"
+mathjax-support = false
+git-repository-url = "https://github.com/KenniBlank"
+github-link = "https://github.com/KenniBlank"
+cname="https://birajtiwari.com.np/notes"
