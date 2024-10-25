@@ -13,6 +13,5 @@ runnable = false
 [output.html]
 default-theme = "navy"
 mathjax-support = false
-git-repository-url = "https://github.com/KenniBlank"
-github-link = "https://github.com/KenniBlank"
+git-repository-url = "https://github.com/KenniBlank/notes"
 cname="https://birajtiwari.com.np/notes"
