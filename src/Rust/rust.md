@@ -1,189 +1,157 @@
 # Rust
+***
+## Local Documentation and Version Update
 
+To access local documentation, use the following command:
 ```bash
-rustup doc # Local Documentation
-rustup update # update to the latest version
-rustc --version # see the version of rust running
+rustup doc
+```
+To update to the latest version of Rust, use:
+```bash
+rustup update
+```
+To check the version of Rust running, use:
+```bash
+rustc --version
 ```
 
-A Macro is a pre-defined sequence of automated input, designed to streamline repetitive tasks.
-In Rustc:
-- using a **"<u>!</u>"** means that you’re calling a macro instead of a normal function and that macros don’t always follow the same rules as functions.
+## Macros
+***
+In Rust, a macro is a pre-defined sequence of automated input designed to streamline repetitive tasks. To call a macro, use the `!` symbol. For example:
+```rs
+macro_name!(arguments);
+```
+Note that macros don't always follow the same rules as functions.
 
 ## Cargo
-Cargo is Rust’s build system and package manager.
-- In Rust, libraries are called dependencies.
-- All code must be in src folder.
+***
+Cargo is Rust's build system and package manager. Here are some key features and commands:
 
-Cargo Cheatsheet:
-- Create Project
-    ```bash
-    cargo new folder_name
-    # creates a new folder with cargo.toml and src which has main.rs file.
-    # Also generates new git repository along with .gitignore file.
+### Creating a New Project
 
-    # If a parent folder is git repo, it doesn't generate
-    cargo new --vcs=git # this overrides that behavour
+To create a new project, use:
+```bash
+cargo new folder_name
+```
+This command creates a new folder with a `Cargo.toml` file and a `src` folder containing a `main.rs` file. It also generates a new Git repository along with a `.gitignore` file.
 
-    cargo new --help # see availabe options
-    ```
+### Building and Running a Project
 
-- Build Project and run execulable
-    ```bash
-    cargo build
-    ./target/build/folder_name
-    ```
+To build a project, use:
+```bash
+cargo build
+```
+To run a project, use:
+```bash
+cargo run
+```
+Alternatively, you can build and run a project in one step using:
+```bash
+cargo run
+```
 
-- Build and run project in one step
-    ```bash
-    cargo run
-    ```
+### Checking for Errors
 
-- check for error without creating any binary
-    ```bash
-    cargo check # quickly checks code to make sure it compiles but doesn't produce executable
-    ```
+To check for errors without creating a binary, use:
+```bash
+cargo check
+```
+This command quickly checks the code to make sure it compiles but doesn't produce an executable.
 
-    > cargo stores build file in target/debug directory
+### Building for Release
 
-- Building for release
-    ```bash
-    cargo build --release # compile with optimization
-    # creates executable in target/release instead of target/debug
-    ```
+To build a project for release, use:
+```bash
+cargo build --release
+```
+This command compiles the project with optimization and creates an executable in the `target/release` directory.
 
+# Syntax and Learning
+***
+### Input/Output Library
 
-## Fun Part: Syntax and Learning
-To obtain user input and print out as output, you must use **io** input/output library into scope.
+To obtain user input and print output, you need to import the `io` library into scope using:
+```rs
+use std::io;
+```
+By default, Rust brings a set of items defined in the standard library into the scope of every program, known as the prelude.
 
-**use std:io;**
+### Variables
 
-By default, Rust has a set of items defined in the standard library that it brings into the scope of every program. This set is called the prelude. (See the Documentation)
+In Rust, variables are declared using the `let` keyword and are immutable by default. To make a variable mutable, use the `mut` keyword. For example:
+```rs
+let apples = 5;
+let mut bananas = 5;
+```
+### Data Types
 
-- **Storing Values with Variables**
-    ```rs
-    // In Rust, variables are declared with let and they are immutable by default i.e values are constant
-    let apples = 5;
+Rust is a statically typed language, which means it must know the data type of all variables at compile time. The language has four primary scalar types:
 
-    // To make a varible mutable, use mut
-    let mut bananas = 5;
+* Integers
 
-    use std::io;
-    // Creates a mutable variable that is bound to a new, empty instance of String.
-    let mut guess = String::new();
+  ![alt text](./image.png)
 
-    ```
+* Floating-point numbers
 
-- ***crates.io* has the crates needed**
-    - include the dependencies in the Cargo.toml file and it will auto download from the website. **Specify version**.
-    - After downloading the dependencies, it compiles then and keeps them for further use afterwards.
+* Booleans
 
-- **Ensure Reproducible builds with Cargo.lock file**
-    Cargo has a mechanism that ensures you can rebuild the same artifact every time you or anyone else builds your code: Cargo will use only the versions of the dependencies you specified until you indicate otherwise. For example, say that next week version 0.8.6 of the rand crate comes out, and that version contains an important bug fix, but it also contains a regression that will break your code. To handle this, Rust creates the Cargo.lock file the first time you run cargo build, so we now have this in the guessing_game directory.
+* Characters
 
-- **Updating a crate to get New Version**
-    ```bash
-    cargo update # ignores cargo.lock and force updates with the specification in cargo.toml file.
-    ```
+### Basic Numeric Operations
 
-- **See documentation of the dependencies locally**
-    ```bash
-    cargo doc --open # opens in the browser
-    ```
+Here's an example of basic numeric operations in Rust:
+```rs
+fn main() {
+    // addition
+    let sum = 5 + 10;
 
+    // subtraction
+    let difference = 95.5 - 4.3;
 
-## Variables:
-Unless specified, all variables are immutable.
+    // multiplication
+    let product = 4 * 30;
 
-**mut**: makes variable mutable
+    // division
+    let quotient = 56.7 / 32.2;
+    let truncated = -5 / 3; // Results in -1
+
+    // remainder
+    let remainder = 43 % 5;
+}
+```
+### Compound Types
+
+Rust has two compound types:
+
+* Tuples
+* Arrays
+
+Tuples have a fixed length and can be declared using the following syntax:
+```rs
+let tup = (500, 6.4, 1);
+```
+Arrays have a fixed length and can be declared using the following syntax:
+```rs
+let a = [1, 2, 3, 4, 5];
+```
+Note that every element of an array must have the same type.
+
+## Variables and Mutability
+
+In Rust, variables are immutable by default. To make a variable mutable, use the `mut` keyword. For example:
 ```rs
 let mut x = 5;
 ```
-
-**const**: makes variable immutable forever.
+To make a variable immutable forever, use the `const` keyword. For example:
 ```rs
 const Y: u32 = 60;
-// const variable_name: data_type = value;
 ```
+Note that `const` and `mut` are different in that `const` makes a variable immutable forever, while `mut` makes a variable mutable.
 
-> Why const and mut is different
+### Shadowing
+
+Rust allows shadowing, which means you can declare a new variable with the same name as an existing variable. For example:
 ```rs
-let mut x = 3;
-x = x + 1;
-print!("Varible value change provides no error: {x}")
-
-const Y: u32 = 60;
-// You cannot change the set Value
+let x = 3;
+let x = x + 1; // this overshadows the value of previous declaration
 ```
-
-
-- **Shadowing**
-    We can shadow variable as:
-    ```rs
-    let x = 3;
-    let x = x + 1; // this overshadows the value of previous declaration
-    ```
-
-- Data Types:
-    Rust is a statically typed language (It must know data type of all variables at compile time).
-    You will get an compilation error everytime compiler doesn't know datatype.
-
-    - Scalar Types:
-    A scalar type represents a single value. Rust has four primary scalar types:
-        - integers
-            ![alt text](image.png)
-            > Each signed variant can store numbers from -(2<sup>n - 1</sup>) to 2<sup>n - 1</sup> - 1 inclusive.
-
-            > The isize and usize types depend on the architecture of the computer your program is running on, which is denoted in the table as “arch”: 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture.
-
-        - floating-points
-            All floating-point numbers are signed. There are f32 and f64 floating point number with f64 as defualt for modern operating system.
-        - Booleans
-            true or false
-        - characters
-            single quote must be used. Takes 4 byte
-
-    - Basic Numeric Operations:
-        ```rs
-        fn main() {
-            // addition
-            let sum = 5 + 10;
-
-            // subtraction
-            let difference = 95.5 - 4.3;
-
-            // multiplication
-            let product = 4 * 30;
-
-            // division
-            let quotient = 56.7 / 32.2;
-            let truncated = -5 / 3; // Results in -1
-
-            // remainder
-            let remainder = 43 % 5;
-        }
-        ```
-
-    - Compound Types:
-        Group multiple values into one type.
-        - Tuples
-            Tuples have fixed length: once declared, cannot grow or shrink in size.
-            Tuples with no value have special name: unit;expressions implicitly return unit value if they don't return any other value.
-            ```rs
-            let tup = (500, 6.4, 1)
-            // Optional method for explicit declaration method:
-            // let tup: (i34, f64, u8) = (500, 6.4, 1)
-
-            let (x, y, z) = tup;
-            println!("The value of Y is: {y}");
-            println!("The value is ({tup.0}, {tup.1}, {tup.2})");
-            ```
-
-        - Arrays
-            Every element of an array must have the same type. Arrays in Rust have fixed length.
-            ```rs
-            let a = [1, 2, 3, 4, 5];
-            let b = ["January", "February", "March"];
-            ```
-            Arrays are useful when you want your data allocated on the stack rather than heap or when you want fixed number of elements.
-            A ***vector*** is a similar collection type provided by the standard library that is allowed to grow or shrink in size.
