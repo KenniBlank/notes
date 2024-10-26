@@ -47,7 +47,7 @@ Understanding the Code:
     $$x' = x \cos(\theta) - y \sin(\theta)$$
     $$y' = x \sin(\theta) + y \cos(\theta)$$
 
-    > Derivation of formulae is on another section. [Click Here](/Concepts/rotation.html#derivation).
+    > Derivation of formulae is on another section. [Click Here](../Other/sinCosForRotationDerivation.html#derivation).
 
     Highly recomended to look at the derivation to better your concept as a programmer.
 
