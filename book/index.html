@@ -30,6 +30,8 @@
 
         <!-- Custom theme stylesheets -->
 
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body class="sidebar-visible no-js">
     <div id="body-container">
@@ -88,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html" class="active">Introduction</a></li><li class="chapter-item expanded "><a href="Rust/rust.html"><strong aria-hidden="true">1.</strong> Rust</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> C</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> SDL2</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> C#</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Python</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> DataScience</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> JavaScript</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Other</div></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html" class="active">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Core Concepts</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Introduction</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Maths</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="Concepts/rotation.html"><strong aria-hidden="true">2.1.</strong> Rotation</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Rendering Concept</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> 2D Rendering</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> 3D Rendering</div></li></ol></li><li class="chapter-item expanded "><li class="part-title">Language Features and Syntax</li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Introduction</div></li><li class="chapter-item expanded "><a href="ProgrammingLanguage/Rust/rust.html"><strong aria-hidden="true">5.</strong> Rust</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> C</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> SDL2</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> C#</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Unity</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Python</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> DataScience</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> PyGame</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> Automation</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Web</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> JavaScript</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Lua</div></li><li class="chapter-item expanded affix "><li class="part-title">Others</li><li class="chapter-item expanded "><a href="Other/sinCosForRotationDerivation.html"><strong aria-hidden="true">11.</strong> SineCosine</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -184,7 +186,7 @@
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
-                            <a rel="next prefetch" href="Rust/rust.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="Concepts/rotation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -195,13 +197,29 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
-                    <a rel="next prefetch" href="Rust/rust.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="Concepts/rotation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

@@ -14,6 +14,7 @@ To check the version of Rust running, use:
 ```bash
 rustc --version
 ```
+[Link](https://doc.rust-lang.org/reference/introduction.html)
 
 ## Macros
 ***
