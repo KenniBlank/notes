@@ -27,11 +27,14 @@
   - [DataScience]()
   - [PyGame]()
   - [Automation]()
+  - [OOP](./ProgrammingLanguage/Python/OOP.md)
 
 - [Web]()
   - [JavaScript]()
 
 - [Lua]()
+
+- [Shell](./Other/shell.md)
 
 # Computer Graphics
   - [Introduction](./ComputerGraphics/introduction.md)
