@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="navy" dir="ltr">
+<html lang="en" class="ayu" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -38,7 +38,7 @@
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -63,7 +63,7 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('navy')
+            html.classList.remove('ayu')
             html.classList.add(theme);
             var body = document.querySelector('body');
             body.classList.remove('no-js')
@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Core Concepts</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Introduction</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Maths</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Concepts/rotation.html" class="active"><strong aria-hidden="true">2.1.</strong> Rotation</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Rendering Concept</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> 2D Rendering</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> 3D Rendering</div></li></ol></li><li class="chapter-item expanded "><li class="part-title">Language Features and Syntax</li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Introduction</div></li><li class="chapter-item expanded "><a href="../ProgrammingLanguage/Rust/rust.html"><strong aria-hidden="true">5.</strong> Rust</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> C</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> SDL2</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> C#</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Unity</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Python</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> DataScience</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> PyGame</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> Automation</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Web</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> JavaScript</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Lua</div></li><li class="chapter-item expanded affix "><li class="part-title">Others</li><li class="chapter-item expanded "><a href="../Other/sinCosForRotationDerivation.html"><strong aria-hidden="true">11.</strong> SineCosine</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Core Concepts</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Introduction</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Maths</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Concepts/rotation.html" class="active"><strong aria-hidden="true">2.1.</strong> Rotation</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Rendering Concept</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> 2D Rendering</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> 3D Rendering</div></li></ol></li><li class="chapter-item expanded "><li class="part-title">Language Features and Syntax</li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Introduction</div></li><li class="chapter-item expanded "><a href="../ProgrammingLanguage/Rust/rust.html"><strong aria-hidden="true">5.</strong> Rust</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> C</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> SDL2</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> C#</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Unity</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Python</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> DataScience</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> PyGame</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> Automation</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Web</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> JavaScript</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Lua</div></li><li class="chapter-item expanded affix "><li class="part-title">Computer Graphics</li><li class="chapter-item expanded "><a href="../ComputerGraphics/introduction.html"><strong aria-hidden="true">11.</strong> Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Others</li><li class="chapter-item expanded "><a href="../Other/sinCosForRotationDerivation.html"><strong aria-hidden="true">12.</strong> SineCosine</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -272,22 +272,6 @@ Sin and Cos have a unique graph to them from their primary definition. Y is defi
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

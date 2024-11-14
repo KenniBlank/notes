@@ -11,7 +11,7 @@ text-direction = "ltr"
 runnable = false
 
 [output.html]
-default-theme = "navy"
+default-theme = "Ayu"
 mathjax-support = true
 git-repository-url = "https://github.com/KenniBlank/notes"
 cname="https://birajtiwari.com.np/notes"

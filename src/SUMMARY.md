@@ -33,5 +33,8 @@
 
 - [Lua]()
 
+# Computer Graphics
+  - [Introduction](./ComputerGraphics/introduction.md)
+
 # Others
   - [SineCosine](./Other/sinCosForRotationDerivation.md)
