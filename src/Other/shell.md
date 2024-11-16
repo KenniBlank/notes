@@ -50,3 +50,19 @@ history # provides history of recently run command
   -l: print the names of files that contain matches, not the matches
   -n: print line numbers for matching lines
   -v: invert the match, i.e., only show lines that don't match
+
+Examples:
+```bash
+grep molar file.txt # outputs all the lines with molar in it
+grep molar -v file.txt # outputs all the lines without molar in it
+grep -c molar /seasonal/winter.csv /seasonal/autumn.csv # outputs the count of molar in each files
+```
+
+
+## Storing the command's output in a file:
+```bash
+(command) > file.xyz
+```
+
+## Pipe
+This is very useful for combining commands.
