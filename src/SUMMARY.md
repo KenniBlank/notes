@@ -24,10 +24,12 @@
   - [Unity]()
 
 - [Python]()
-  - [DataScience]()
   - [PyGame]()
   - [Automation]()
   - [OOP](./ProgrammingLanguage/Python/OOP.md)
+
+- [DataScience]()
+  - [Introduction](./DataScience/Introduction.md)
 
 - [Web]()
   - [JavaScript]()
