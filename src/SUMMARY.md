@@ -10,8 +10,6 @@
   - [2D Rendering]()
   - [3D Rendering]()
 
-
-
 # Language Features and Syntax
 - [Introduction]()
 
@@ -37,6 +35,7 @@
 - [Lua]()
 
 - [Shell](./Other/shell.md)
+- [NeoVim](./Other/nvim.md)
 
 # Computer Graphics
   - [Introduction](./ComputerGraphics/introduction.md)

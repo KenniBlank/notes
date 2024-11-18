@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Shell - Notes</title>
+        <title>NeoVim - Notes</title>
 
 
         <!-- Custom HTML head -->
@@ -157,119 +157,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="shell-command-reference"><a class="header" href="#shell-command-reference">Shell Command Reference</a></h1>
-<h2 id="basic-navigation-and-file-management"><a class="header" href="#basic-navigation-and-file-management">Basic Navigation and File Management</a></h2>
-<pre><code class="language-bash">pwd                     # Print current directory
-ls                      # List items in current directory
-ls /path/to/dir        # List items in specified directory
-ls -R                   # List all files and directories recursively
-ls -F                   # Append / for directories and * for executables
-
-cd /path/to/dir        # Change to specified directory
-cd ~                    # Change to home directory
-cd ..                   # Move up one directory
-
-cp source.txt dest.txt  # Copy file
-mv oldname.txt newname.txt # Move or rename file
-rm filename.txt         # Remove file
-rmdir directory          # Remove empty directory
-mkdir new_directory      # Create new directory
-</code></pre>
-<h2 id="file-viewing-and-manipulation"><a class="header" href="#file-viewing-and-manipulation">File Viewing and Manipulation</a></h2>
-<pre><code class="language-bash">cat file.txt            # Display file content
-less file1.txt          # View file with pagination
-head file.txt           # Display first 10 lines
-head -n 5 file.txt      # Display first 5 lines
-
-# Use man for command manual
-man command_name        # Display manual for command
-</code></pre>
-<h2 id="text-processing"><a class="header" href="#text-processing">Text Processing</a></h2>
-<pre><code class="language-bash">cut -d, -f1 file.csv    # Extract first column from CSV
-grep pattern file.txt    # Search for pattern in file
-grep -c pattern file.txt  # Count matching lines
-grep -v pattern file.txt  # Show lines that do not match
-
-# Pipe example
-head file.txt | tail -n 2  # Display last 2 lines of the first 10
-</code></pre>
-<h2 id="output-redirection-and-piping"><a class="header" href="#output-redirection-and-piping">Output Redirection and Piping</a></h2>
-<pre><code class="language-bash">command &gt; output.txt      # Redirect output to file
-command1 | command2       # Pipe output of command1 to command2
-</code></pre>
-<h2 id="word-count-and-sorting"><a class="header" href="#word-count-and-sorting">Word Count and Sorting</a></h2>
-<pre><code class="language-bash">wc -l file.txt            # Count lines in file
-sort file.txt             # Sort file content
-sort -n file.txt          # Sort numerically
-uniq file.txt             # Remove duplicate lines
-</code></pre>
-<h2 id="variables"><a class="header" href="#variables">Variables</a></h2>
-<pre><code class="language-bash">echo $USER                # Print value of USER variable
-my_var=value              # Define a shell variable
-echo $my_var              # Print variable value
-</code></pre>
-<h2 id="loops"><a class="header" href="#loops">Loops</a></h2>
-<pre><code class="language-bash">for filetype in gif jpg png; do
-    echo $filetype
-done
-
-for filename in directory/*; do
-    echo $filename
-done
-</code></pre>
-<h2 id="shell-scripts"><a class="header" href="#shell-scripts">Shell Scripts</a></h2>
-<pre><code class="language-bash">bash script.sh            # Run a shell script
-sort $@ | uniq            # Sort and remove duplicates from input files
-cut -d, -f $2 $1         # Use command-line parameters in script
-</code></pre>
-<h2 id="regular-expressions"><a class="header" href="#regular-expressions">Regular Expressions</a></h2>
-<ul>
-<li><strong>?</strong> matches a single character</li>
-<li><strong>[...]</strong> matches any character in brackets</li>
-<li><strong>{...}</strong> matches any of the comma-separated patterns</li>
-</ul>
-<pre><code class="language-bash">#!/bin/bash
-
-# Create sample files
-touch file1.txt file2.txt file3.csv file4.txt file5.csv file6.doc
-
-# Display all files
-echo "All files:"
-ls
-
-# Use regular expressions to match files
-echo -e "\nFiles that start with 'file' and end with '.txt':"
-ls file*.txt
-
-echo -e "\nFiles that start with 'file' and have a single character before '.csv':"
-ls file?.csv
-
-echo -e "\nFiles that are either .txt or .csv:"
-ls file{1..5}.{txt,csv}
-
-# Use grep to filter content in a sample text file
-echo -e "\nCreating a sample text file for grep demonstration..."
-echo -e "apple\nbanana\ncherry\napricot\nblueberry" &gt; fruits.txt
-
-echo -e "\nLines containing 'a' or 'b':"
-grep '[ab]' fruits.txt
-
-echo -e "\nLines that do not contain 'a':"
-grep -v 'a' fruits.txt
-
-# Clean up
-rm file*.txt file*.csv file*.doc fruits.txt
-</code></pre>
+                        <h1 id="neovim"><a class="header" href="#neovim">NeoVim</a></h1>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../DataScience/Introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../Other/shell.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../Other/nvim.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../ComputerGraphics/introduction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -279,11 +177,11 @@ rm file*.txt file*.csv file*.doc fruits.txt
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../DataScience/Introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../Other/shell.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../Other/nvim.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../ComputerGraphics/introduction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
