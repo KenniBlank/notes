@@ -34,8 +34,8 @@
 
 - [Lua]()
 
-- [Shell](./Other/shell.md)
 - [NeoVim](./Other/nvim.md)
+- [Shell](./Other/shell.md)
 
 # Computer Graphics
   - [Introduction](./ComputerGraphics/introduction.md)
