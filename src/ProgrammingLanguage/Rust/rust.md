@@ -16,6 +16,11 @@ rustc --version
 ```
 [Link](https://doc.rust-lang.org/reference/introduction.html)
 
+Book
+```bash
+rustup doc --book
+```
+
 ## Macros
 ***
 In Rust, a macro is a pre-defined sequence of automated input designed to streamline repetitive tasks. To call a macro, use the `!` symbol. For example:
