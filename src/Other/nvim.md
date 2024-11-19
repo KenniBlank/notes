@@ -25,4 +25,3 @@ Normal mode:
     - *<i>* to append after the line.
     - *<dw>* from start or middle of word to delete upto next space.
     - *<d$>* to delete from to the end of the line.
-
