@@ -28,6 +28,8 @@
 
 - [DataScience]()
   - [Introduction](./DataScience/Introduction.md)
+  - [Concepts](./DataScience/Concepts.md)
+  - [Syntax](./DataScience/SyntaxPY.md)
 
 - [Web]()
   - [JavaScript]()
