@@ -13,7 +13,7 @@ Steps:
 - Load dataset
 - Make list of all correct categorical value
 - use the list to remove bogus values or correct it if enough data
--
+
 ```py
 import numpy as np
 import pandas as pd
@@ -21,7 +21,6 @@ import matplotlib.pyplot as plt
 import seaborn as sb
 from sklearn.preprocessing import LabelEncoder
 
-#
 # create a new dataframe with possible values for blood type
 blood_type_categories = pd.DataFrame({
 	'blood_type': ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']
